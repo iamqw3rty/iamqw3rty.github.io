@@ -40,9 +40,9 @@ function new_line(){
   const span1 = document.createElement("span");
   const span2 = document.createElement("span");
   p.setAttribute("class", "path")
-  p.textContent = "# user";
-  span1.textContent = " in";
-  span2.textContent = " ~/okcrp-term";
+  p.textContent = "user";
+  span1.textContent = "@";
+  span2.textContent = "okcrp-terminal";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -79,6 +79,7 @@ async function getInputValue(){
     trueValue(value);
     createText("Welcome to Oklahoma City Roleplay!")
     createText("We are an up-and-coming roleplay server that aims to provide a fun but professional roleplay experience for everyone.")
+    createText("To view important links for our server, type 'social -a'.")
   }
   else if(value === "social -a"){
     trueValue(value);
