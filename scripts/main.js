@@ -21,15 +21,13 @@ app.addEventListener("click", function(event){
 
 
 async function open_terminal(){
-  createText("Welcome");
-  await delay(700);
-  createText("Starting the server...");
-  await delay(1500);
-  createText("You can run several commands:");
+  createText("Welcome to the Oklahoma City Roleplay website!");
+  await delay(1000);
+  createText("Here are some commands you can run:");
  
-  createCode("about me", "Who am i and what do i do.");
-  createCode("all", "See all commands.");
-  createCode("social -a", "All my social networks.");
+  createCode("about", "View nfo about the server.");
+  createCode("help", "View the command list.");
+  createCode("social -a", "View the server's social networks.");
 
   await delay(500);
   new_line();
@@ -44,7 +42,7 @@ function new_line(){
   p.setAttribute("class", "path")
   p.textContent = "# user";
   span1.textContent = " in";
-  span2.textContent = " ~/heber-leonard";
+  span2.textContent = " ~/okcrp-term";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -71,26 +69,22 @@ async function getInputValue(){
   if(value === "all"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects. Follow me there ;)");
-    createCode("about me", "Who am i and what do i do.");
-    createCode("social -a", "All my social networks.");
-    createCode("clear", "Clean the terminal.");
+    createCode("help", "View this page.");
+    createcode("about", "View info about the server.")
+    createCode("social -a", "View the server's social networks.");
+    createCode("clear", "Clear the terminal.");
     
   }
-  else if(value === "projects"){
+  else if(value === "about"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
-  }
-  else if(value === "about me"){
-    trueValue(value);
-    createText("Oi, meu nome é Héber ;)")
-    createText("Desenvolvedor atualmente focado em todo o ecossistema Javascript. Utilizando principalmente a stack <span class='blue'>Node, React e React Native </span>por permitir criar aplicações de forma descomplicada e produtiva.")
+    createText("Welcome to Oklahoma City Roleplay!")
+    createText("We are an up-and-coming roleplay server that aims to provide a fun but professional roleplay experience for everyone.")
   }
   else if(value === "social -a"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
-    createText("<a href='https://www.linkedin.com/in/heber-leonard/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/heber-leonard</a>")
-    createText("<a href='https://www.instagram.com/heber_leonard/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/heber_leonard</a>")
+    createText("<a href='https://discord.gg/TAeqQ4v6Nz/' target='_blank'><i class='fab fa-discord white'></i> discord.gg/TAeqQ4v6Nz</a>")
+    createText("<a href='https://twitter.com/OklahomaCityRP/' target='_blank'><i class='fab fa-twitter white'></i> twitter.com/OklahomaCityRP</a>")
+    createText("<a href='https://policeroleplay.community/join/OklCity/' target='_blank'><i class='fab fa-readme white'></i> policeroleplay.community/join/OklCity")
   }
   else if(value === "social"){
     trueValue(value);
