@@ -66,7 +66,7 @@ function removeInput(){
 async function getInputValue(){
   
   const value = document.querySelector("input").value;
-  if(value === "all"){
+  if(value === "help"){
     trueValue(value);
     
     createCode("help", "View this page.");
