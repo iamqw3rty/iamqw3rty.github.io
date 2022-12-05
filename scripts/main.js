@@ -25,7 +25,7 @@ async function open_terminal(){
   await delay(1000);
   createText("Here are some commands you can run:");
  
-  createCode("about", "View nfo about the server.");
+  createCode("about", "View info about the server.");
   createCode("help", "View the command list.");
   createCode("social -a", "View the server's social networks.");
 
