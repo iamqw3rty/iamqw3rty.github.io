@@ -68,8 +68,9 @@ async function getInputValue(){
   const value = document.querySelector("input").value;
   if(value === "help"){
     trueValue(value);
+    
     createCode("help", "View this page.");
-    createcode("about", "View info about the server.");
+    createCode("about", "View info about the server.");
     createCode("social -a", "View the server's social networks.");
     createCode("clear", "Clear the terminal.");
     
